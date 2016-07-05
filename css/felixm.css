@@ -1,0 +1,632 @@
+ body{
+   background: #edeeef; /*blueish gray */
+   color:#444;
+   /* padding-top:150px; room for nav */
+   font-size:1.2em;
+   color:#333; margin:5px;
+   font-family: "proxima-nova", 'freight-text-pro', 'PT Sans', Helvetica, Sans, sans-serif;
+ }
+ h1,h2,h3,h4{
+      font-family: 'freight-display-pro' ,"proxima-nova", 'Vollkorn', serif;
+      font-weight: 900;
+ }
+.hidden{
+  display:none;
+}
+.clear{clear: both;}
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img{max-width:100%;}
+
+
+/* typo */
+h1.pagetitle{font-size: 3em; line-height: 1em; margin:0; }
+h2{
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  font-size: 1em;
+
+}
+p, .about_social{font-size: 0.9em; color: #777; }
+
+
+
+
+
+.content-wrap {
+    width: 54em;
+    margin: 0 auto;
+}
+body.wide .content-wrap {
+    width: 96%;
+    max-width:2000px;
+    padding: 0 2%;
+}
+
+nav.nav{
+  color:#333;
+  display: block;
+  clear: both;
+  margin:10px;
+  margin-bottom: 8em;
+
+}
+nav.nav .logo{
+  border:2px solid #777;
+  color:#777;
+  font-size: 1.2em;
+  letter-spacing: .05em;
+  margin:1em;
+  margin-right: 2em;
+  padding:0.5em 1em ;
+  font-weight:500;
+  float: left;
+}
+
+nav.nav .logo:hover{
+  background:#fff;
+  border-color: #333;
+  color:#000;
+  transition: none;
+}
+nav.nav{
+  padding-top:0.2em;
+}
+nav.nav a{
+  display: inline-block;
+  color: #777;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.2s;
+  font-size: 23px;
+  font-weight: 500;
+  margin-right: 15px;
+  letter-spacing: .03em;
+-webkit-transition: color .2s ease-in-out;
+-o-transition: color .1s ease-in-out;
+transition: color .1s ease-in-out;
+color: #afafaf;
+  border-color: #3a48e6;
+}
+
+
+.topnav{display: none;}
+.topnav .logo{
+  float:left;
+  background-color: #999;
+  background-color: rgba(33,33,33, 1);
+  padding: 24px;
+  margin-right: 30px;
+  color: white;
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+.topnav .logo:hover{
+  background-color: #f52;
+  text-decoration: none;
+  color: white;
+
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+.topnav {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(255,255,255, 0.95);
+  /*  border-bottom: 1px #ddd solid; */
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index: 1;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+/* Float the list items side by side */
+nav ul li {float: left;}
+
+/* Style the links inside the list items */
+.topnav ul li a {
+    display: inline-block;
+    color: #777;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 19px;
+    letter-spacing: .03em;
+-webkit-transition: color .2s ease-in-out;
+-o-transition: color .2s ease-in-out;
+transition: color .2s ease-in-out;
+color: #afafaf;
+    border-color: #3a48e6;
+
+}
+
+.topnav ul li a:hover , .topnav ul li a.active , .nav ul li a:hover , .nav ul li a.active {
+    color: #000;
+}
+
+
+.topnav ul li a:before, .nav ul li a:before{
+  /* strike */
+
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    display: block;
+    content: '';
+    width: 15px;
+    height: 3px;
+    margin: 0 auto;
+    padding:0 10px;
+    background: #3a48e6;
+    position: relative;
+    /*top: -1.5em;*/
+    left: -10px; /*half the paddingc*/
+    opacity: 0;
+    bottom:-0.7em;
+    z-index:0;
+    z-index: -1;
+}
+
+.topnav ul li a:hover:before, .nav ul li a:hover:before {
+    width: 100%;
+    opacity: 1;
+
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+
+/* Change background color of links on hover */
+.topnav ul li a:hover {background-color: #fff;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+.topnav ul li.icon {display: none;}
+
+
+footer nav.nav, footer section{
+  padding: 0;
+  margin: 0;
+}
+footer nav.nav li, footer nav.nav ul{
+    margin-left:0;
+    padding-left: 0;
+}
+footer nav.nav a{
+  padding-left: 0;
+  padding-right: 30px;
+  border-color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.6);
+}
+footer nav.nav a:hover{
+  color:#fff;
+  border-color: rgba(255,255,255,0.6);
+}
+
+/* button transition
+.button-wrap {
+    position: relative;
+    width: 295px;
+    height: 55px;
+    margin: 45px 0 0 0;
+    float: left;
+}
+
+.red-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+ .red-box .before {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ef4652;
+}
+ .red-box .before,  .red-box .after {
+    font-size: 20px;
+    border: 5px solid #ef4652;
+    border:5px solid #333;
+    color:#333;
+    margin:0;
+    padding:0;
+    font-weight:700;
+}
+.red-box .before span, .red-box .after span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.red-box .mask {
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    -moz-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.red-box .mask .after {
+    position: absolute;
+    left: 0;
+    width: 295px;
+    height: 100%;
+    background: #ef4652;
+    color: #fff;
+}
+ .red-box:hover .mask {
+    -moz-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    width: 100%;
+}
+
+*/
+
+
+
+
+
+
+
+
+.content a {
+   -webkit-transition: background .2s ease-in-out;
+   -o-transition: background .2s ease-in-out;
+   transition: background .2s ease-in-out;
+   border-bottom: 2px solid #3a48e6;
+   color: #303030; /*darker shade of txt */
+}
+.content a:hover {
+   background: #fff;
+}
+
+
+.btn {
+    outline: 0;
+    letter-spacing: .03em;
+    -webkit-appearance: none;
+    background: 0 0;
+    border: 1px solid #efefef;
+    padding: .75em 1em;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: #afafaf;
+     font-weight: 400;
+    -webkit-transition: border-color .3s ease-in-out,color .3s ease-in-out;
+    -o-transition: border-color .3s ease-in-out,color .3s ease-in-out;
+    transition: border-color .3s ease-in-out,color .3s ease-in-out;
+}
+
+.btn:hover {
+    color: #303030;
+    border-color: #afafaf;
+}
+
+.btn_twitter {
+    color: #0076ff;
+    padding-left: 3em;
+    background: transparent url(/img/twitter.svg) 1em center no-repeat;
+    -webkit-background-size: 1.3em 1.3em;
+    background-size: 1.3em;
+}
+
+
+.topnav .btn_twitter, .nav .btn_twitter{
+  float:right;
+}
+.twit_follow{
+
+  font-size:0.9em;
+  margin:1em;
+
+}
+.twit_follow a.btn_twitter{
+  color:#afafaf;
+      padding-left: 50px;
+      font-size: 1em;
+      border-color: #afafaf;
+}
+.twit_follow:hover a {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+    text-decoration: none;
+}
+
+
+
+
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  .topnav ul li:not(:first-child) {display: none;}
+  .topnav ul li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  .topnav ul.responsive {position: relative;}
+  .topnav ul.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav ul.responsive li {
+    float: none;
+    display: inline;
+  }
+  .topnav ul.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+
+
+.photogal{
+  margin-bottom: -5px;
+}
+
+
+
+
+.border.top {
+    top: 0;
+}
+.border.bottom {
+    bottom: 0;
+}
+.border.left {
+    left: 0;
+}
+.border.right {
+    right: 0;
+}
+.border.left, .border.right {
+    width: 5px;
+    top: 0;
+    height: 100%;
+}
+.border.top, .border.bottom {
+    width: 100%;
+    height: 5px;
+    left: 0;
+}
+.border {
+    position: fixed;
+    z-index: 100;
+    background: #3a48e6; /* accent color
+
+    3a48e6 - mid soft indigo
+    3a48e6 - electric indigo
+
+     */
+}
+
+
+
+/*
+
+main project page
+*/
+
+header {
+  display: none;
+}
+
+hr{
+  border:3px solid #ddd;
+}
+
+footer{
+  background: #3a48e6; /* 3a48e6   is the new  3a48e6*/
+  color: #fff; /* accent */
+  margin: 0;
+  padding:20px;
+  padding-top:10px;
+}
+
+
+
+footer div.nav, footer .copy{
+  display:none;
+}
+
+
+.super{
+  margin-bottom: 2em;
+   margin-top:0.4em; }
+.super h1{
+  font-size:3em;
+  line-height: 1.2em;
+  margin:0;
+}
+.super p{
+  font-size:1.2em;
+  line-height: 1em;
+  font-weight: 700;
+  color: #3a48e6; /* accent */
+}
+.super p a{
+  color: #3a48e6; /* accent */
+}
+
+
+.project{
+  padding-top: 2em;
+  clear:both;
+  width:100%;
+}
+.project .wrap{
+  display:block;
+  width:55%;
+  float: left;
+}
+.project.right .wrap{
+  display:block;
+  width:55%;
+  float: right;
+}
+.project img{
+   width:36%;
+  float: right;
+  margin-left: 2%;
+  display: inline-block;
+}
+.project.right img{
+  float: left;
+  margin-right: 2%;
+  margin-left: 0;
+}
+.project h1{
+  font-size: 2.0em;
+  line-height: 1em;
+  font-weight: 900;
+}
+.project p{
+  font-size: 1.0em;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+.project .sep{
+  background: #666;
+  width:20%;
+  height: 5px;
+}
+
+.project.builtin img{
+  width:230px;
+  padding-right:90px;
+  margin-top:40px;
+}
+.project.px500 img{
+  padding-right:10px;
+  margin-top:60px;
+}
+.project.weroll img{
+  margin-top:40px;
+}
+
+.project.research img{
+  margin-top:60px;
+}
+
+.project .device-wrap{
+  height:280px;
+  width: 410px;
+  margin-top:70px;
+  float: left;
+  margin-right: 2%;
+  margin-left: 0;
+}
+.project .ipad {
+  transform: scale(0.4);
+  transform-origin: top left;
+  overflow: hidden;
+}
+.project .ipad video{
+  width:100%;
+  top:0;
+  position: absolute;
+  left:0;
+}
+
+
+
+/*  aBOUT   */
+
+/* about */
+
+
+
+.col{
+  margin-top: 0.6em;
+}
+.card{
+  border-top: 5px #e0e0e0 solid;
+  padding-right:0px;
+  padding-bottom:10px;
+  padding-top:13px;
+  margin-bottom: 10px;
+}
+
+.card h2{
+  font-size: 1.3em;
+  font-weight: 900;
+  line-height: 1em;
+  margin:0;
+}
+.card p, .about_social {
+  font-size: 0.9em;
+  /* responsive: only on large display*/
+   max-width:90%;
+   margin-top:0.5em;
+}
+
+
+.col{
+  width: 30%;
+  margin-right: 3%;
+  float:left;
+}
+
+img.portrait{
+  width:100%;
+}
+
+.about_social {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    margin-top:5px;
+}
+
+.about_social li {
+    padding: .5em 0 0;
+}
+.about_social .icon {
+    position: relative;
+    top: 0.2em;
+    width: 1.1em;
+    margin-right: .25em;
+    display: inline-block;
+}
+.about_social a{font-weight: bold; }
